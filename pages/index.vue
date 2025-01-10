@@ -25,7 +25,8 @@
 
 		<main class="pt-24 pb-16">
 			<!-- Hero Section -->
-			<Motion :initial="{ opacity: 0, y: 20 }" :in-view="{ opacity: 1, y: 0 }"
+			<Motion
+:initial="{ opacity: 0, y: 20 }" :in-view="{ opacity: 1, y: 0 }"
 				:transition="{ type: 'spring', stiffness: 50, damping: 15 }" :in-view-options="{ once: true }">
 				<section class="max-w-6xl mx-auto px-4 mb-24">
 					<div class="flex items-start justify-between mb-12">
@@ -37,7 +38,8 @@
 							<ArrowUpRightIcon class="w-4 h-4" />
 						</a>
 					</div>
-					<Motion :in-view="{ scale: 1, opacity: 1 }"
+					<Motion
+:in-view="{ scale: 1, opacity: 1 }"
 						:transition="{ type: 'spring', stiffness: 45, damping: 15, delay: 0.2 }" :in-view-options="{ once: true }">
 						<div class="rounded-3xl bg-gray-200">
 							<img
@@ -49,7 +51,8 @@
 			</Motion>
 
 			<!-- Project Overview -->
-			<Motion :initial="{ opacity: 0, x: -20 }" :in-view="{ opacity: 1, x: 0 }"
+			<Motion
+				:initial="{ opacity: 0, x: -20 }" :in-view="{ opacity: 1, x: 0 }"
 				:transition="{ type: 'spring', stiffness: 45, damping: 15 }" :in-view-options="{ once: true }">
 				<section class="max-w-6xl mx-auto px-4 mb-24">
 					<h2 class="text-2xl font-bold mb-4">Project Overview</h2>
@@ -61,7 +64,8 @@
 			</Motion>
 
 			<!-- Project Image -->
-			<Motion :initial="{ opacity: 0, scale: 0.98 }" :in-view="{ opacity: 1, scale: 1 }"
+			<Motion
+:initial="{ opacity: 0, scale: 0.98 }" :in-view="{ opacity: 1, scale: 1 }"
 				:transition="{ type: 'spring', stiffness: 45, damping: 15 }" :in-view-options="{ once: true }">
 				<section class="max-w-6xl mx-auto px-4 mb-24">
 					<img
@@ -71,7 +75,8 @@
 			</Motion>
 
 			<!-- City Section -->
-			<Motion :initial="{ opacity: 0, y: 20 }" :in-view="{ opacity: 1, y: 0 }"
+			<Motion
+:initial="{ opacity: 0, y: 20 }" :in-view="{ opacity: 1, y: 0 }"
 				:transition="{ type: 'spring', stiffness: 45, damping: 15 }" :in-view-options="{ once: true }">
 				<section class="max-w-6xl mx-auto px-4 mb-24">
 					<h2 class="text-2xl font-bold mb-4">City</h2>
@@ -80,7 +85,8 @@
 						life.
 					</p>
 					<div class="grid grid-cols-2 gap-8">
-						<Motion :initial="{ opacity: 0, x: -20 }" :in-view="{ opacity: 1, x: 0 }"
+						<Motion
+:initial="{ opacity: 0, x: -20 }" :in-view="{ opacity: 1, x: 0 }"
 							:transition="{ type: 'spring', stiffness: 45, damping: 15, delay: 0.1 }"
 							:in-view-options="{ once: true }">
 							<div class="bg-gray-100 rounded-3xl p-8">
@@ -89,7 +95,8 @@
 									alt="Aero App Icon" class="w-full">
 							</div>
 						</Motion>
-						<Motion :initial="{ opacity: 0, x: 20 }" :in-view="{ opacity: 1, x: 0 }"
+						<Motion
+:initial="{ opacity: 0, x: 20 }" :in-view="{ opacity: 1, x: 0 }"
 							:transition="{ type: 'spring', stiffness: 45, damping: 15, delay: 0.2 }"
 							:in-view-options="{ once: true }">
 							<div class="bg-gray-100 rounded-3xl p-8">
@@ -103,7 +110,8 @@
 			</Motion>
 
 			<!-- Project Showcase -->
-			<Motion :initial="{ opacity: 0 }" :in-view="{ opacity: 1 }"
+			<Motion
+:initial="{ opacity: 0 }" :in-view="{ opacity: 1 }"
 				:transition="{ type: 'spring', stiffness: 45, damping: 15 }" :in-view-options="{ once: true, amount: 0.1 }">
 				<section class="max-w-6xl mx-auto px-4 mb-24">
 					<h2 class="text-2xl font-bold mb-8">Project Showcase</h2>
@@ -137,7 +145,8 @@
 			</Motion>
 
 			<!-- Contact Form -->
-			<Motion :initial="{ opacity: 0, y: 20 }" :in-view="{ opacity: 1, y: 0 }"
+			<Motion
+:initial="{ opacity: 0, y: 20 }" :in-view="{ opacity: 1, y: 0 }"
 				:transition="{ type: 'spring', stiffness: 45, damping: 15 }" :in-view-options="{ once: true }">
 				<section class="max-w-6xl mx-auto px-4 mb-24">
 					<h2 class="text-2xl font-bold mb-4">Get in touch</h2>
@@ -146,13 +155,17 @@
 						features and streamlined interactions.
 					</p>
 					<form class="max-w-6xl space-y-4" @submit.prevent="handleSubmit">
-						<input v-model="form.name" type="text" placeholder="Full Name"
+						<input
+v-model="form.name" type="text" placeholder="Full Name"
 							class="w-full px-4 py-3 rounded-lg bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0">
-						<input v-model="form.email" type="email" placeholder="Email Address"
+						<input
+v-model="form.email" type="email" placeholder="Email Address"
 							class="w-full px-4 py-3 rounded-lg bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0">
-						<textarea v-model="form.message" placeholder="Write your Message" rows="6"
+						<textarea
+v-model="form.message" placeholder="Write your Message" rows="6"
 							class="w-full px-4 py-3 rounded-lg bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" />
-						<button type="submit"
+						<button
+type="submit"
 							class="w-full px-4 py-3 bg-black text-white rounded-lg hover:bg-black/90 transition-colors">
 							Send Message
 						</button>
